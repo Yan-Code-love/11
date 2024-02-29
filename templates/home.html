@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        {% if breed %}
+        the breed you enterd is Updata it in the Form below:
+        {% else %}
+        please enter your breed
+        {% endif %}
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.breed.lable }} {{ form.breed() }}
+            {{ form.submit() }}
+        </form>
+    </p>
+</body>
+</html>
